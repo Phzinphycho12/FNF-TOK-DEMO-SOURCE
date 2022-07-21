@@ -144,7 +144,9 @@ class FreeplayState extends MusicBeatState
 		versionShit.scrollFactor.set();
 		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit);
-
+                #if android
+addVirtualPad(FULL, A_B);
+#end
 		super.create();
 	}
 
@@ -305,7 +307,7 @@ class FreeplayState extends MusicBeatState
 
 	function changeSelection(change:Int = 0)
 	{
-		#if !switch
+		#if (!switch && ng)
 		// NGio.logEvent('Fresh');
 		#end
 
