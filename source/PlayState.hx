@@ -793,7 +793,9 @@ class PlayState extends MusicBeatState
 
 		if (!loadRep)
 			rep = new Replay("na");
-
+          #if android
+      addVirtualPad(FULL, A_B);
+      #end
 		super.create();
 	}
 
@@ -810,6 +812,9 @@ class PlayState extends MusicBeatState
 
 	function startCountdown():Void
 	{
+		#if android	 
+androidc.visible = true;
+#end
 		inCutscene = false;
 
 		generateStaticArrows(0);
