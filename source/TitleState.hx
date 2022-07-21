@@ -348,7 +348,6 @@ class TitleState extends MusicBeatState
 		{
 			#if (!switch && newgrounds)
 			NGio.unlockMedal(60960);
-			#end
 
 			// If it's Friday according to da clock
 			if (Date.now().getDay() == 5)
