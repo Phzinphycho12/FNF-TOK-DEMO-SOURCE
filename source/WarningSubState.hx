@@ -17,6 +17,9 @@ class WarningSubState extends MusicBeatState
 
 	override function create()
 	{
+          #if android
+      addVirtualPad(A_B);
+      #end
 		super.create();
 		
 		var bg:FlxSprite = new FlxSprite(0, -700).loadGraphic(Paths.image('conceptsketch3', 'preload'));
